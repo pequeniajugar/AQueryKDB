@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: default
+Implementation-Title: aquery
+Implementation-Version: 0.1
+Implementation-Vendor-Id: default
+Specification-Vendor: default
+Specification-Title: aquery
+Specification-Version: 0.1
+Main-Class: edu.nyu.aquery.Aquery
+
