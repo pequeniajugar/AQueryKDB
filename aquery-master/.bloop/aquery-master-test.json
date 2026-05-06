@@ -1,0 +1,260 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "aquery-master-test",
+        "directory": "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master",
+        "workspaceDir": "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master",
+        "sources": [
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/scala",
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/scala-2.11",
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/scala-2",
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/java",
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/target/scala-2.11/src_managed/test"
+        ],
+        "dependencies": [
+            "aquery-master"
+        ],
+        "classpath": [
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.bloop/aquery-master/scala-2.11/classes",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.11/7.2.4/scalaz-core_2.11-7.2.4.jar",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+            "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar"
+        ],
+        "out": "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.bloop/aquery-master",
+        "classesDir": "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.bloop/aquery-master/scala-2.11/test-classes",
+        "resources": [
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/resources",
+            "/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/target/scala-2.11/resource_managed/test"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.11.12",
+            "options": [
+                "-feature",
+                "-deprecation"
+            ],
+            "jars": [
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar",
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar",
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar",
+                "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "zio.test.sbt.ZTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "weaver.framework.CatsEffect"
+                    ]
+                },
+                {
+                    "names": [
+                        "hedgehog.sbt.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/Users/tianxin/Library/Caches/Coursier/arc/https/github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%252B8/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.18_8.tar.gz/jdk-17.0.18+8/Contents/Home",
+                "options": [
+                    "-Duser.dir=/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.11",
+                    "version": "1.0.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.11",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.11",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalaz",
+                    "name": "scalaz-core_2.11",
+                    "version": "7.2.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalaz-core_2.11",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.11/7.2.4/scalaz-core_2.11-7.2.4.jar"
+                        },
+                        {
+                            "name": "scalaz-core_2.11",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.11/7.2.4/scalaz-core_2.11-7.2.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest_2.11",
+                    "version": "2.2.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatest_2.11",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar"
+                        },
+                        {
+                            "name": "scalatest_2.11",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.11",
+                    "version": "1.0.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.11",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.11",
+                            "classifier": "sources",
+                            "path": "/Users/tianxin/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

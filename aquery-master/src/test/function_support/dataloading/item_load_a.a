@@ -1,0 +1,12 @@
+CREATE TABLE item(
+  itemnum INT,
+  price FLOAT
+)
+
+LOAD DATA INFILE "/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/item_10_8.csv"
+INTO TABLE item
+FIELDS TERMINATED BY ","
+
+<q>
+show item;
+</q>

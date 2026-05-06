@@ -1,0 +1,95 @@
+settings: slide P166
+input size recommandation: 10000, 1000000, 1000000
+
+
+uniformly distributed data：
+outstanding_uniform.py
+->
+orders_uniform_10_{exponent}.csv
+store_uniform_10_{exponent}.csv
+item_uniform_10_{exponent}.csv
+vendorOutstanding_uniform_10_{exponent}.csv
+storeOutstanding_uniform_10_{exponent}.csv
+
+fractally distributed data：
+outstanding_fractal.py
+->
+order_fractal_10_{exponent}.csv
+store_fractal_10_{exponent}.csv
+item_fractal_10_{exponent}.csv
+vendorOutstanding_fractal_10_{exponent}.csv
+storeOutstanding_fractal_10_{exponent}.csv
+
+the uniform and 80/20 fractal distributed column is orders(vendorid)
+
+
+table1:
+n = input size
+orders(ordernum, itemnum, quantity, price, storeid, vendorid);
+	ordernum: int	1...n		primary key
+	itemnum: int	(1, n / 2.5)
+	quantity: int	(1, 100)
+	price: decimal.2 copied from item.price for itemnum
+	storeid:  text	 (1, n // 100)
+	vendorid: text	 (1...n+1)
+
+CREATE TABLE orders (
+    ordernum INT,
+    itemnum INT,          
+    quantity INT, 
+    price DECIMAL(10,2),
+    storeid VARCHAR(20),   
+    vendorid VARCHAR(20)       
+);
+
+
+table2:
+n = input size // 100
+store( storeid, name );
+	storeid: text	1...n		primary key
+	name: text	Store1...Storen 
+
+CREATE TABLE store (
+    storeid VARCHAR(20),
+    name VARCHAR(25)
+);
+
+
+table3:
+n = input size / 2.5
+item(itemnum, price); 
+	itemnum: int	1...n			primary key
+	price: decimal.2	(1, 100) 
+
+CREATE TABLE item (
+    itemnum INT,
+    price DECIMAL(10,2)
+);
+
+
+
+table4:
+uniform: n = input size // 1000
+fractal: inputsize = 10^4, n = 8002
+	     inputsize = 10^6, n = 800001
+	     inputsize = 10^8, n = 800003
+vendorOutstanding( vendorid, amount); 
+	vendorid: text	1...n			primary key
+	amount: decimal.2	(99000, 100000) 
+
+CREATE TABLE vendorOutstanding(
+    vendorid VARCHAR(20),
+    amount DECIMAL(10,2)
+);
+
+
+table5:
+n = input size / 5
+storeOutstanding( storeid, amount);
+	storeid: text	1...n			primary key
+	amount: decimal.2	(9000, 10000) 
+
+CREATE TABLE storeOutstanding (
+    storeid VARCHAR(20),
+    amount DECIMAL(10,2)
+);

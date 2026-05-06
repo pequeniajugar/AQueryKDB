@@ -1,0 +1,18 @@
+CREATE TABLE orders(id INT, qty INT)
+CREATE TABLE max_log(max_qty INT)
+
+CREATE TRIGGER trg_max_after_insert
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO INSERT INTO max_log(max_qty)
+   SELECT MAX(qty) AS max_qty
+   FROM inserted
+
+
+INSERT INTO orders VALUES(1, 10)
+INSERT INTO orders VALUES(2, 20)
+
+<q>
+show orders;
+show max_log;
+</q>

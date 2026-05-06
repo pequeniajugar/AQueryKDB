@@ -1,0 +1,5 @@
+<q>
+emp_hash_hundreds1:update hundreds1:`g#hundreds1 from employees;
+</q>
+
+SELECT * FROM emp_hash_hundreds1 WHERE hundreds1 = 150

@@ -1,0 +1,68 @@
+[0m[[0m[0mdebug[0m] [0m[0mSeparate classpath projects and all dependencies start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mSeparate classpath projects and all dependencies end. Took 1 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect only external dependencies start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect only external dependencies end. Took 0 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect excluded jar names start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect excluded jar names end. Took 0 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mFilter jars start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFilter jars end. Took 0 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade project classes start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade project classes end. Took 5 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade dependency entries start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect and shade dependency entries end. Took 10 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect renames start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect renames end. Took 53 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mProcess renames start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mProcess renames end. Took 10 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect all merge strategies for cache check start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCollect all merge strategies for cache check end. Took 43 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mBuilding assembly jar due to missing output...[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge all conflicting jar entries (including those renamed) start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge all conflicting jar entries (including those renamed) end. Took 367 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mReport merge results start:[0m
+[0m[[0m[0minfo[0m] [0m[0m7 file(s) merged using strategy 'Discard' (Run the task at debug level to see the details)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge Strategy Used: Discard[0m
+[0m[[0m[0mdebug[0m] [0m[0mResulting entries:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  None[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Project name = aquery, target = .DS_Store[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge Strategy Used: Discard[0m
+[0m[[0m[0mdebug[0m] [0m[0mResulting entries:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  None[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Jar name = scala-parser-combinators_2.11-1.0.4.jar, jar org = org.scala-lang.modules, entry target = META-INF/MANIFEST.MF[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Jar name = scala-library-2.11.12.jar, jar org = org.scala-lang, entry target = META-INF/MANIFEST.MF[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Jar name = scalaz-core_2.11-7.2.4.jar, jar org = org.scalaz, entry target = META-INF/MANIFEST.MF[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge Strategy Used: Discard[0m
+[0m[[0m[0mdebug[0m] [0m[0mResulting entries:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  None[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Project name = aquery, target = edu/.DS_Store[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge Strategy Used: Discard[0m
+[0m[[0m[0mdebug[0m] [0m[0mResulting entries:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  None[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Project name = aquery, target = edu/nyu/.DS_Store[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge Strategy Used: Discard[0m
+[0m[[0m[0mdebug[0m] [0m[0mResulting entries:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  None[0m
+[0m[[0m[0mdebug[0m] [0m[0mMerge origins:[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Project name = aquery, target = edu/nyu/aquery/.DS_Store[0m
+[0m[[0m[0mdebug[0m] [0m[0mReport merge results end. Took 4 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinding remaining conflicts that were not merged start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinding remaining conflicts that were not merged end. Took 34 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mSort/Parallelize merged entries start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mSort/Parallelize merged entries end. Took 17 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate jar start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate jar end. Took 930 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mHash newly-built Jar start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mHash newly-built Jar end. Took 47 ms[0m
+[0m[[0m[0minfo[0m] [0m[0mBuilt: /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/target/scala-2.11/aquery.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mJar hash: 3a675a53ea11946b7e5f42e6105ed30a7ffe0eda[0m
+[0m[[0m[0mdebug[0m] [0m[0mClose library jar references start:[0m
+[0m[[0m[0mdebug[0m] [0m[0mClose library jar references end. Took 9 ms[0m

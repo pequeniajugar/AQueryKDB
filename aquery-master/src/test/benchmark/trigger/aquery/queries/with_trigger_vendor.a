@@ -1,0 +1,3 @@
+SELECT amount
+FROM vendorOutstanding
+WHERE vendorid = "10"

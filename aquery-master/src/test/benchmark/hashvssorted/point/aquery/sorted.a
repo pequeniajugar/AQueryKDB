@@ -1,0 +1,6 @@
+<q>
+emp_sorted_ssnum:`ssnum xasc employees;
+emp_sorted_ssnum:update ssnum:`s#ssnum from emp_sorted_ssnum;
+</q>
+
+SELECT * FROM emp_sorted_ssnum WHERE ssnum = 150

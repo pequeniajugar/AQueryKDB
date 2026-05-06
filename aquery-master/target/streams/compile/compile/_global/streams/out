@@ -1,0 +1,4 @@
+[error] /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/main/scala/edu/nyu/aquery/codegen/KdbGenerator.scala:1264:24: wrong number of arguments for pattern edu.nyu.aquery.ast.Insert(n: String,order: List[(edu.nyu.aquery.ast.OrderDirection, edu.nyu.aquery.ast.Expr)],modifier: List[String],src: Either[List[edu.nyu.aquery.ast.Expr],edu.nyu.aquery.ast.Query])
+[error]         case i @ Insert(_, _, _, Right(q), _) if t.refs.nonEmpty =>
+[error]                        ^
+[error] one error found

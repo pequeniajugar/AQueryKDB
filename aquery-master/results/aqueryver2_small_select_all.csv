@@ -1,0 +1,12 @@
+dbms,label,iteration,execution_time,response_time
+aqueryver2,All Columns,1,0.017000,0.210000
+aqueryver2,All Columns,2,0.016000,0.121000
+aqueryver2,All Columns,3,0.016000,0.119000
+aqueryver2,All Columns,4,0.018000,0.124000
+aqueryver2,All Columns,5,0.018000,0.213000
+aqueryver2,All Columns,6,0.015000,0.122000
+aqueryver2,All Columns,7,0.018000,0.128000
+aqueryver2,All Columns,8,0.017000,0.124000
+aqueryver2,All Columns,9,0.016000,0.126000
+aqueryver2,All Columns,10,0.014000,0.129000
+aqueryver2,All Columns,11,0.017000,0.126000

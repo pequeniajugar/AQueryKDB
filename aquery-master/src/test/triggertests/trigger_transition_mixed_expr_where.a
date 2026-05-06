@@ -1,0 +1,24 @@
+CREATE TABLE table1(id INT, delta INT, limit INT)
+CREATE TABLE table2(id INT, qty INT, note STRING)
+
+INSERT INTO table1 VALUES(1, 5, 20)
+INSERT INTO table1 VALUES(2, 7, 50)
+
+INSERT INTO table2 VALUES(1, 10, "dest1")
+INSERT INTO table2 VALUES(2, 100, "dest2")
+
+CREATE TRIGGER trg_sync_mixed_expr
+AFTER UPDATE ON table1
+REFERENCING NEW TABLE AS inserted
+DO UPDATE table2
+   SET qty = table2.qty + inserted.delta
+   WHERE table2.id = inserted.id AND table2.qty < inserted.limit
+
+UPDATE table1
+SET delta = 9, limit = 25
+WHERE id = 1
+
+<q>
+show table1;
+show table2;
+</q>

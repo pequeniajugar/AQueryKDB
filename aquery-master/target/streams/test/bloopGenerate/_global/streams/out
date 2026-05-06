@@ -1,0 +1,4 @@
+[debug] [aquery-master-test] Classpath dependencies List()
+[debug] [aquery-master-test] Dependencies from configurations List(aquery-master)
+[debug] Bloop wrote the configuration of project 'aquery-master-test' to '/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.bloop/aquery-master-test.json'
+[success] Generated .bloop/aquery-master-test.json

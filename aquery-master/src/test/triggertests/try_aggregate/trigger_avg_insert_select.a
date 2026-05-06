@@ -1,0 +1,17 @@
+CREATE TABLE orders(id INT, qty INT)
+CREATE TABLE avg_log(avg_qty FLOAT)
+
+CREATE TRIGGER trg_avg_after_insert
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO INSERT INTO avg_log
+   SELECT AVG(qty) AS avg_qty
+   FROM inserted
+
+INSERT INTO orders VALUES(1, 10)
+INSERT INTO orders VALUES(2, 20)
+
+<q>
+show orders;
+show avg_log;
+</q>

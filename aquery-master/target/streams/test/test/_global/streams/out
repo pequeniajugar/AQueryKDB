@@ -1,0 +1,93 @@
+[debug] Running TaskDef(KdbGeneratorTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] KdbGeneratorTestSuite:
+[info] - simple expressions/UDF
+[info] - create
+[info] - insert
+[info] - load/save
+[info] - update/delete
+[info] - trigger registration codegen
+[info] - trigger registration codegen multi-key
+[info] - trigger registration codegen expression mapping
+[info] - trigger registration codegen mixed target and transition expression
+[info] - trigger registration codegen complex delete where
+[info] - trigger registration codegen old-table update mapping
+[info] - trigger registration codegen after delete old-table mapping
+[info] - trigger registration codegen delete-sync mapping
+[info] - trigger registration codegen before delete old-table binding
+[info] - drop trigger codegen
+[info] - simple queries
+[info] - simple.a
+[info] - fintime.a
+[info] - monetdb.a *** FAILED ***
+[info]   passed0 was false basic: 
+[info]   Files: /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/translated_6955252038839873060.q, /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_1230547249843028451.q
+[info]   +(,`q95)!,,94.99247
+[info]   +(,`q5)!,,4.997797
+[info]   "assign"
+[info]   Failed to load:/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_1230547249843028451.q (KdbGeneratorTestSuite.scala:464)
+[info] - pandas.a
+[debug] Running TaskDef(TypeCheckerTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] TypeCheckerTestSuite:
+[info] - expressions
+[info] - udf
+[info] - queries
+[info] - modification queries
+[info] - simple program
+[info] - fintime benchmark
+[info] - monetbd benchmark
+[info] - pandas benchmark
+[debug] Running TaskDef(JoinAnalysisTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] JoinAnalysisTestSuite:
+[info] - query/filter type
+[info] - tables used/available
+[info] - annotate
+[info] - place filter
+[debug] Running TaskDef(BasicOptimizerTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] BasicOptimizerTestSuite:
+[info] - simplify sort
+[info] - filterBeforeSort
+[info] - embedSort
+[info] - simplifyEmbeddedSort
+[info] - pushFiltersJoin
+[info] - makeReorderFilter
+[info] - sortToSortCols
+[info] - batch optimization
+[debug] Running TaskDef(OrderAnalysisTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] OrderAnalysisTestSuite:
+[info] - order-dependence
+[info] - removing order dependence
+[info] - columns w/ direct sorting
+[info] - interaction sets
+[info] - interactions indirectly reachable
+[info] - minimal sorting cols
+[info] - has sort and extract sort
+[debug] Running TaskDef(ParserTestSuite, org.scalatest.tools.Framework$$anon$1@6ffeeabf, false, [SuiteSelector])
+[info] ParserTestSuite:
+[info] - arithmetic
+[info] - case expressions
+[info] - create/insert
+[info] - trigger
+[info] - io
+[info] - update
+[info] - delete
+[info] - udf
+[info] - from-clause
+[info] - complete query
+[info] - simple program
+[info] - fintime benchmark
+[info] - monetbd benchmark
+[info] - pandas benchmark
+[info] Run completed in 10 seconds, 896 milliseconds.
+[info] Total number of tests run: 61
+[info] Suites: completed 6, aborted 0
+[info] Tests: succeeded 60, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[debug] Passed tests:
+[debug] 	TypeCheckerTestSuite
+[debug] 	JoinAnalysisTestSuite
+[debug] 	BasicOptimizerTestSuite
+[debug] 	OrderAnalysisTestSuite
+[debug] 	ParserTestSuite
+[error] Failed tests:
+[error] 	KdbGeneratorTestSuite
+[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful

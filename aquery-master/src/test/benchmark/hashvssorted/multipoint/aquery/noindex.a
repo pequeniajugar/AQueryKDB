@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE hundreds1 = 150

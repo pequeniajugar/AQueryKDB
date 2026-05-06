@@ -1,0 +1,23 @@
+SELECT
+  L.l_orderkey,
+  L.l_partkey,
+  L.l_suppkey,
+  L.l_linenumber,
+  L.l_quantity,
+  L.l_extendedprice,
+  L.l_discount,
+  L.l_tax,
+  L.l_returnflag,
+  L.l_linestatus,
+  L.l_shipdate,
+  L.l_commitdate,
+  L.l_receiptdate,
+  L.l_shipinstruct,
+  L.l_shipmode,
+  L.l_comment,
+  R.r_name
+FROM lineitem AS L, supplier AS S, nation AS N, region AS R
+WHERE L.l_suppkey = S.s_suppkey
+  AND S.s_nationkey = N.n_nationkey
+  AND N.n_regionkey = R.r_regionkey
+  AND R.r_name = "EUROPE"

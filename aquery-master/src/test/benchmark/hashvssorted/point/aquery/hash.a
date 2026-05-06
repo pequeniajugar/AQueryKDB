@@ -1,0 +1,5 @@
+<q>
+emp_hash_ssnum:update ssnum:`u#ssnum from employees;
+</q>
+
+SELECT * FROM emp_hash_ssnum WHERE ssnum = 150

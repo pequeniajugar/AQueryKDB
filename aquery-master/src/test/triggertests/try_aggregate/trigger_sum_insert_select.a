@@ -1,0 +1,17 @@
+CREATE TABLE orders(id INT, qty INT)
+CREATE TABLE sum_log(total INT)
+
+CREATE TRIGGER trg_sum_after_insert
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO INSERT INTO sum_log
+   SELECT SUM(qty) AS total
+   FROM inserted
+
+INSERT INTO orders VALUES(1, 10)
+INSERT INTO orders VALUES(2, 20)
+
+<q>
+show orders;
+show sum_log;
+</q>

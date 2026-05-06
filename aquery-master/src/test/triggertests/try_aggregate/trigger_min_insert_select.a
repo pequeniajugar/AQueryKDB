@@ -1,0 +1,17 @@
+CREATE TABLE orders(id INT, qty INT)
+CREATE TABLE min_log(min_qty INT)
+
+CREATE TRIGGER trg_min_after_insert
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO INSERT INTO min_log
+   SELECT MIN(qty) AS min_qty
+   FROM inserted
+
+INSERT INTO orders VALUES(1, 10)
+INSERT INTO orders VALUES(2, 20)
+
+<q>
+show orders;
+show min_log;
+</q>

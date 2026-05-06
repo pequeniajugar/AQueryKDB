@@ -1,0 +1,9 @@
+CREATE TABLE table1(id INT, qty INT)
+
+CREATE TRIGGER trg_drop_me
+AFTER UPDATE ON table1
+DO UPDATE table1
+   SET qty = qty + 1
+   WHERE id = 1
+
+DROP TRIGGER trg_drop_me

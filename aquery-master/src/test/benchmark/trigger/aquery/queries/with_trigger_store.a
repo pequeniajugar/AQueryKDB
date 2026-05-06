@@ -1,0 +1,3 @@
+SELECT amount
+FROM storeOutstanding
+WHERE storeid = "10"

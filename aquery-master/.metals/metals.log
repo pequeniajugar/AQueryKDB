@@ -1,0 +1,428 @@
+2026.03.31 20:31:59 INFO  Started: Metals version 1.6.6 in folders '/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master' for client Visual Studio Code 1.104.2.
+2026.03.31 20:31:59 INFO  Memory monitor started
+2026.03.31 20:31:59 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.31 20:32:13 INFO  running '/opt/homebrew/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'
+2026.03.31 20:32:13 INFO  no build target found for /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.31 20:32:13 WARN  no build target for: /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/metals.sbt
+2026.03.31 20:32:13 WARN  no build target for: /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/metals.sbt
+2026.03.31 20:32:15 INFO  no build target found for /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.31 20:32:16 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 17.0.18)
+2026.03.31 20:32:16 INFO  [info] loading settings for project aquery-master-build-build-build from metals.sbt ...
+2026.03.31 20:32:16 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/project
+2026.03.31 20:32:18 INFO  [info] loading settings for project aquery-master-build-build from metals.sbt ...
+2026.03.31 20:32:18 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project
+2026.03.31 20:32:19 INFO  [success] Generated .bloop/aquery-master-build-build.json
+2026.03.31 20:32:19 INFO  [success] Total time: 1 s, completed Mar 31, 2026, 8:32:19 PM
+2026.03.31 20:32:19 INFO  [info] loading settings for project aquery-master-build from assembly.sbt,metals.sbt ...
+2026.03.31 20:32:19 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project
+2026.03.31 20:32:19 INFO  [success] Generated .bloop/aquery-master-build.json
+2026.03.31 20:32:19 INFO  [success] Total time: 1 s, completed Mar 31, 2026, 8:32:20 PM
+2026.03.31 20:32:20 ERROR /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/build.sbt:13: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2026.03.31 20:32:20 ERROR parallelExecution in Test := false
+2026.03.31 20:32:20 ERROR                   ^
+2026.03.31 20:32:20 ERROR /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/build.sbt:15: warning: method in in trait ScopingSetting is deprecated (since 1.5.0): `in` is deprecated; migrate to slash syntax - https://www.scala-sbt.org/1.x/docs/Migrating-from-sbt-013x.html#slash
+2026.03.31 20:32:20 ERROR fork in run := true
+2026.03.31 20:32:20 ERROR      ^
+2026.03.31 20:32:20 INFO  [info] loading settings for project aquery-master from build.sbt ...
+2026.03.31 20:32:20 INFO  [info] set current project to aquery (in build file:/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/)
+2026.03.31 20:32:20 INFO  [success] Generated .bloop/aquery-master.json
+2026.03.31 20:32:20 INFO  [success] Generated .bloop/aquery-master-test.json
+2026.03.31 20:32:20 INFO  [success] Total time: 0 s, completed Mar 31, 2026, 8:32:21 PM
+2026.03.31 20:32:21 INFO  time: ran 'sbt bloopInstall' in 8.11s
+2026.03.31 20:32:21 INFO  Attempting to connect to the build server...
+2026.03.31 20:32:21 INFO  No running Bloop server found, starting one.
+2026.03.31 20:32:24 INFO  Starting compilation server
+2026.03.31 20:32:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:32:27 INFO  Attempting to connect to the build server...
+2026.03.31 20:32:27 INFO  Found a Bloop server running
+2026.03.31 20:32:27 INFO  Attempting to connect to the build server...
+2026.03.31 20:32:27 INFO  Found a Bloop server running
+2026.03.31 20:32:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:32:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:32:28 INFO  time: Connected to build server in 7.34s
+2026.03.31 20:32:28 INFO  Connected to Build server: Bloop v2.0.19
+2026.03.31 20:32:30 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:30 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:30 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:31 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:31 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:31 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:31 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:31 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:31 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:31 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:32 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:32 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:32 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:33 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:33 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:33 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:33 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:33 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:33 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:33 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:34 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:34 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:34 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:35 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:35 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:35 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:35 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:35 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:35 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:35 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:35 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:35 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:35 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:36 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:36 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:36 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:36 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:36 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:36 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:36 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:37 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:37 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:37 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:38 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:38 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:38 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:38 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:38 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:38 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:38 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:39 ERROR Error downloading Dependency(org.scalameta:mtags_2.11.8, 1.6.6, Configuration(), Set(), Publication(, Type(), Extension(), Classifier()), false, true)
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:39 INFO  Using coursier binary at /opt/homebrew/bin/coursier
+2026.03.31 20:32:39 INFO  Running coursier with command /opt/homebrew/bin/coursier, using it to fetch dependency
+2026.03.31 20:32:40 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:40 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:40 ERROR Downloading https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:40 ERROR Downloaded https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom.sha1
+2026.03.31 20:32:40 ERROR Resolution error: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+2026.03.31 20:32:40 ERROR   not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+2026.03.31 20:32:40 ERROR   not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+2026.03.31 20:32:40 ERROR Failed to resolve mtags for 2.11.8
+coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scalameta:mtags_2.11.8:1.6.6
+  not found: /Users/tianxin/.ivy2/local/org.scalameta/mtags_2.11.8/1.6.6/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: /Users/tianxin/.m2/repository/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+  not found: https://central.sonatype.com/repository/maven-snapshots/org/scalameta/mtags_2.11.8/1.6.6/mtags_2.11.8-1.6.6.pom
+	at coursier.Resolve$.$anonfun$validate$2(Resolve.scala:506)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at coursier.Resolve$.validate(Resolve.scala:500)
+	at coursier.Resolve.validate0$1(Resolve.scala:233)
+	at coursier.Resolve.$anonfun$ioWithConflicts0$8(Resolve.scala:284)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1(Task.scala:14)
+	at coursier.util.Task$.$anonfun$flatMap$extension$1$adapted(Task.scala:14)
+	at coursier.util.Task$.wrap(Task.scala:82)
+	at coursier.util.Task$.$anonfun$flatMap$2(Task.scala:14)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2026.03.31 20:32:41 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.31 20:32:47 INFO  time: indexed workspace in 18s
+2026.03.31 20:34:02 INFO  running '/opt/homebrew/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'
+2026.03.31 20:34:03 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 17.0.18)
+2026.03.31 20:34:03 INFO  [info] loading settings for project aquery-master-build-build-build from metals.sbt ...
+2026.03.31 20:34:03 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/project
+2026.03.31 20:34:03 INFO  [info] loading settings for project aquery-master-build-build from metals.sbt ...
+2026.03.31 20:34:03 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project
+2026.03.31 20:34:04 INFO  [success] Generated .bloop/aquery-master-build-build.json
+2026.03.31 20:34:04 INFO  [success] Total time: 1 s, completed Mar 31, 2026, 8:34:04 PM
+2026.03.31 20:34:04 INFO  [info] loading settings for project aquery-master-build from assembly.sbt,metals.sbt ...
+2026.03.31 20:34:04 INFO  [info] loading project definition from /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project
+2026.03.31 20:34:04 INFO  [success] Generated .bloop/aquery-master-build.json
+2026.03.31 20:34:04 INFO  [success] Total time: 0 s, completed Mar 31, 2026, 8:34:05 PM
+2026.03.31 20:34:04 INFO  [info] loading settings for project aquery-master from build.sbt ...
+2026.03.31 20:34:04 INFO  [info] set current project to aquery (in build file:/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/)
+2026.03.31 20:34:07 INFO  [success] Generated .bloop/aquery-master.json
+2026.03.31 20:34:07 INFO  [success] Generated .bloop/aquery-master-test.json
+2026.03.31 20:34:07 INFO  [success] Total time: 2 s, completed Mar 31, 2026, 8:34:07 PM
+2026.03.31 20:34:07 INFO  time: ran 'sbt bloopInstall' in 4.48s
+2026.03.31 20:34:07 INFO  Disconnecting from Bloop session...
+2026.03.31 20:34:07 INFO  Shut down connection with build server.
+2026.03.31 20:34:07 INFO  Shut down connection with build server.
+2026.03.31 20:34:07 INFO  Shut down connection with build server.
+2026.03.31 20:34:07 INFO  Attempting to connect to the build server...
+2026.03.31 20:34:07 INFO  Found a Bloop server running
+2026.03.31 20:34:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:34:08 INFO  Attempting to connect to the build server...
+2026.03.31 20:34:08 INFO  Found a Bloop server running
+2026.03.31 20:34:08 INFO  Attempting to connect to the build server...
+2026.03.31 20:34:08 INFO  Found a Bloop server running
+2026.03.31 20:34:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:34:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.31 20:34:08 INFO  time: Connected to build server in 1.16s
+2026.03.31 20:34:08 INFO  Connected to Build server: Bloop v2.0.19
+2026.03.31 20:34:09 INFO  time: Imported build in 1.14s
+2026.03.31 20:34:12 INFO  time: indexed workspace in 2.95s
+2026.03.31 20:34:12 INFO  skipping build import with status 'Installed'
+Mar 31, 2026 8:35:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 31, 2026 8:35:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 01, 2026 6:41:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 01, 2026 6:41:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 01, 2026 6:41:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.01 07:27:57 INFO  compiling aquery-master (25 scala sources)
+2026.04.01 07:28:09 INFO  time: compiled aquery-master in 11s
+2026.04.01 07:28:09 INFO  compiling aquery-master (2 scala sources)
+2026.04.01 07:28:11 INFO  time: compiled aquery-master in 1.89s
+2026.04.01 07:28:12 INFO  compiling aquery-master (1 scala source)
+2026.04.01 07:28:14 INFO  time: compiled aquery-master in 1.51s
+2026.04.01 07:28:23 INFO  compiling aquery-master-test (6 scala sources)
+2026.04.01 07:28:25 INFO  time: compiled aquery-master-test in 1.49s
+2026.04.01 07:28:30 INFO  compiling aquery-master-test (1 scala source)
+2026.04.01 07:28:30 INFO  time: compiled aquery-master-test in 0.63s
+2026.04.01 07:29:58 INFO  compiling aquery-master (1 scala source)
+2026.04.01 07:29:59 INFO  time: compiled aquery-master in 1.36s
+2026.04.01 07:45:15 INFO  compiling aquery-master (1 scala source)
+2026.04.01 07:45:16 INFO  time: compiled aquery-master in 1.27s
+2026.04.01 07:50:49 INFO  compiling aquery-master (1 scala source)
+2026.04.01 07:50:50 INFO  time: compiled aquery-master in 1.22s
+2026.04.01 08:38:44 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:38:46 INFO  time: compiled aquery-master in 1.3s
+2026.04.01 08:40:47 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:40:48 INFO  time: compiled aquery-master in 1.22s
+2026.04.01 08:41:57 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:41:58 INFO  time: compiled aquery-master in 1.23s
+2026.04.01 08:51:24 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:51:24 INFO  time: compiled aquery-master in 0.85s
+2026.04.01 08:51:24 INFO  compiling aquery-master (2 scala sources)
+2026.04.01 08:51:25 INFO  time: compiled aquery-master in 0.39s
+2026.04.01 08:51:33 INFO  compiling aquery-master (2 scala sources)
+2026.04.01 08:51:34 INFO  time: compiled aquery-master in 1.32s
+2026.04.01 08:51:34 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:51:34 INFO  time: compiled aquery-master in 0.27s
+2026.04.01 08:51:39 INFO  compiling aquery-master (3 scala sources)
+2026.04.01 08:51:40 INFO  time: compiled aquery-master in 1.42s
+2026.04.01 08:51:40 INFO  compiling aquery-master (1 scala source)
+2026.04.01 08:51:40 INFO  time: compiled aquery-master in 0.28s
+2026.04.01 08:51:55 INFO  compiling aquery-master (4 scala sources)
+2026.04.01 08:51:57 INFO  time: compiled aquery-master in 2.09s
+2026.04.01 08:52:13 INFO  compiling aquery-master-test (1 scala source)
+2026.04.01 08:52:13 INFO  time: compiled aquery-master-test in 0.63s
+2026.04.01 08:52:18 INFO  compiling aquery-master-test (1 scala source)
+2026.04.01 08:52:18 INFO  time: compiled aquery-master-test in 0.52s
+2026.04.01 09:09:52 INFO  compiling aquery-master (1 scala source)
+2026.04.01 09:09:52 INFO  time: compiled aquery-master in 0.26s
+2026.04.01 09:16:13 INFO  compiling aquery-master (1 scala source)
+2026.04.01 09:16:14 INFO  time: compiled aquery-master in 1.25s
+Apr 06, 2026 12:52:20 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.09 15:24:19 INFO  Shutting down server
+2026.04.09 15:24:19 INFO  Memory monitor stopped
+2026.04.09 15:24:19 INFO  shutting down Metals
+2026.04.09 15:24:19 INFO  Shut down connection with build server.
+2026.04.09 15:24:19 INFO  Shut down connection with build server.
+2026.04.09 15:24:19 INFO  Shut down connection with build server.
+2026.04.09 15:24:19 INFO  Exiting server
+2026.04.09 15:54:57 INFO  Started: Metals version 1.6.7 in folders '/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master' for client Visual Studio Code 1.109.5.
+2026.04.09 15:54:57 INFO  Memory monitor started
+2026.04.09 15:54:57 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.09 15:54:57 INFO  Attempting to connect to the build server...
+2026.04.09 15:54:57 INFO  No running Bloop server found, starting one.
+2026.04.09 15:54:58 INFO  Starting compilation server
+2026.04.09 15:54:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.09 15:54:59 INFO  Attempting to connect to the build server...
+2026.04.09 15:54:59 INFO  Found a Bloop server running
+2026.04.09 15:54:59 INFO  Attempting to connect to the build server...
+2026.04.09 15:54:59 INFO  Found a Bloop server running
+2026.04.09 15:54:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.09 15:54:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.09 15:54:59 INFO  time: Connected to build server in 1.35s
+2026.04.09 15:54:59 INFO  Connected to Build server: Bloop v2.0.19
+2026.04.09 15:55:02 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.09 15:55:06 INFO  time: indexed workspace in 7.36s
+2026.04.09 15:55:10 INFO  compiling aquery-master (25 scala sources)
+2026.04.09 15:55:16 INFO  time: compiled aquery-master in 6.1s
+Apr 18, 2026 12:03:57 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 18, 2026 6:52:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.20 19:30:26 INFO  compiling aquery-master-test (6 scala sources)
+2026.04.20 19:30:29 INFO  time: compiled aquery-master-test in 2.38s
+Apr 22, 2026 12:48:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 22, 2026 12:49:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 22, 2026 12:49:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 22, 2026 12:49:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.04.28 21:25:28 INFO  Shutting down server
+2026.04.28 21:25:28 INFO  Memory monitor stopped
+2026.04.28 21:25:28 INFO  shutting down Metals
+2026.04.28 21:25:28 INFO  Shut down connection with build server.
+2026.04.28 21:25:28 INFO  Shut down connection with build server.
+2026.04.28 21:25:28 INFO  Shut down connection with build server.
+2026.04.28 21:25:28 INFO  Exiting server
+2026.04.28 21:30:52 INFO  Started: Metals version 1.6.7 in folders '/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master' for client Visual Studio Code 1.117.0.
+2026.04.28 21:30:52 INFO  Memory monitor started
+2026.04.28 21:30:53 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.28 21:30:53 INFO  Attempting to connect to the build server...
+2026.04.28 21:30:53 INFO  No running Bloop server found, starting one.
+2026.04.28 21:30:53 INFO  Starting compilation server
+2026.04.28 21:30:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.28 21:30:54 INFO  Attempting to connect to the build server...
+2026.04.28 21:30:54 INFO  Found a Bloop server running
+2026.04.28 21:30:54 INFO  Attempting to connect to the build server...
+2026.04.28 21:30:54 INFO  Found a Bloop server running
+2026.04.28 21:30:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.28 21:30:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.04.28 21:30:54 INFO  time: Connected to build server in 1.65s
+2026.04.28 21:30:54 INFO  Connected to Build server: Bloop v2.0.19
+2026.04.28 21:30:56 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.04.28 21:30:56 INFO  time: indexed workspace in 2.43s
+2026.05.05 06:33:55 INFO  Shutting down server
+2026.05.05 06:33:55 INFO  Memory monitor stopped
+2026.05.05 06:33:55 INFO  shutting down Metals
+2026.05.05 06:33:55 INFO  Shut down connection with build server.
+2026.05.05 06:33:55 INFO  Shut down connection with build server.
+2026.05.05 06:33:55 INFO  Shut down connection with build server.
+2026.05.05 06:33:55 INFO  Exiting server
+2026.05.05 06:36:17 INFO  Started: Metals version 1.6.7 in folders '/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master' for client Visual Studio Code 1.118.1.
+2026.05.05 06:36:17 INFO  Memory monitor started
+2026.05.05 06:36:18 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.05 06:36:18 INFO  Attempting to connect to the build server...
+2026.05.05 06:36:18 INFO  No running Bloop server found, starting one.
+2026.05.05 06:36:18 INFO  Starting compilation server
+2026.05.05 06:36:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.05 06:36:19 INFO  Attempting to connect to the build server...
+2026.05.05 06:36:19 INFO  Found a Bloop server running
+2026.05.05 06:36:19 INFO  Attempting to connect to the build server...
+2026.05.05 06:36:19 INFO  Found a Bloop server running
+2026.05.05 06:36:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.05 06:36:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/project/.metals/bsp.trace.json or /Users/tianxin/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.05 06:36:20 INFO  time: Connected to build server in 1.7s
+2026.05.05 06:36:20 INFO  Connected to Build server: Bloop v2.0.19
+2026.05.05 06:36:22 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.05 06:36:22 INFO  time: indexed workspace in 2.88s
+May 06, 2026 12:25:18 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

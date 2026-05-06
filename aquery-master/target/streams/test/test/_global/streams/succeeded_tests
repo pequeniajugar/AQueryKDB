@@ -1,0 +1,7 @@
+#Successful Tests
+#Wed Apr 01 07:32:37 EDT 2026
+ParserTestSuite=1775043146118
+OrderAnalysisTestSuite=1775017731991
+TypeCheckerTestSuite=1775017731880
+BasicOptimizerTestSuite=1775017731956
+JoinAnalysisTestSuite=1775017731895

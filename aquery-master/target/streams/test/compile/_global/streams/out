@@ -1,0 +1,7 @@
+[error] /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/scala/KdbGeneratorTestSuite.scala:2:8: object KdbGenerator is not a member of package edu.nyu.aquery.codegen
+[error] import edu.nyu.aquery.codegen.KdbGenerator
+[error]        ^
+[error] /Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master/src/test/scala/KdbGeneratorTestSuite.scala:85:5: not found: value KdbGenerator
+[error]     KdbGenerator.generate(prog)
+[error]     ^
+[error] two errors found

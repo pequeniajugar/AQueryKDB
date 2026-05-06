@@ -1,0 +1,6 @@
+<q>
+employee
+</q>
+SELECT ssnum
+FROM employee INNER JOIN techdept USING dept
+

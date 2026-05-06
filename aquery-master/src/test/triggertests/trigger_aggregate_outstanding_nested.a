@@ -1,0 +1,57 @@
+CREATE TABLE orders(
+  ordernum INT,
+  itemnum INT,
+  quantity INT,
+  lineAmount INT,
+  storeid STRING,
+  vendorid STRING
+)
+
+CREATE TABLE item(
+  itemnum INT,
+  price INT
+)
+
+CREATE TABLE vendorOutstanding(
+  vendorid STRING,
+  amount INT
+)
+
+CREATE TABLE storeOutstanding(
+  storeid STRING,
+  amount INT
+)
+
+INSERT INTO item VALUES(101, 5)
+INSERT INTO item VALUES(102, 7)
+
+INSERT INTO vendorOutstanding VALUES("V1", 1000)
+INSERT INTO vendorOutstanding VALUES("V2", 2000)
+
+INSERT INTO storeOutstanding VALUES("S1", 100)
+INSERT INTO storeOutstanding VALUES("S2", 200)
+
+CREATE TRIGGER updateVendorOutstanding
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO UPDATE vendorOutstanding
+   SET amount = amount + inserted.lineAmount
+   WHERE vendorOutstanding.vendorid = inserted.vendorid
+
+CREATE TRIGGER updateStoreOutstanding
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO UPDATE storeOutstanding
+   SET amount = amount + inserted.lineAmount
+   WHERE storeOutstanding.storeid = inserted.storeid
+
+INSERT INTO orders VALUES(1, 101, 3, 15, "S1", "V1")
+INSERT INTO orders VALUES(2, 102, 2, 14, "S2", "V2")
+
+<q>
+.aq.vendor_after:{vendorOutstanding};
+.aq.store_after:{storeOutstanding};
+show orders;
+show vendorOutstanding;
+show storeOutstanding;
+</q>

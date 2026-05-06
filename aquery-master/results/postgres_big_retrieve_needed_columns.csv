@@ -1,0 +1,23 @@
+dbms,label,iteration,execution_time,response_time
+postgres,All Columns,1,0.648000,0.748000
+postgres,All Columns,2,0.638000,0.727000
+postgres,All Columns,3,0.638000,0.727000
+postgres,All Columns,4,0.641000,0.735000
+postgres,All Columns,5,0.639000,0.725000
+postgres,All Columns,6,0.645000,0.732000
+postgres,All Columns,7,0.642000,0.736000
+postgres,All Columns,8,0.645000,0.726000
+postgres,All Columns,9,0.643000,0.731000
+postgres,All Columns,10,0.643000,0.729000
+postgres,All Columns,11,0.644000,0.728000
+postgres,All Columns,1,62.223000,88.372000
+postgres,All Columns,2,61.295000,68.467000
+postgres,All Columns,3,61.339000,68.587000
+postgres,All Columns,4,61.347000,68.726000
+postgres,All Columns,5,61.267000,68.600000
+postgres,All Columns,6,61.218000,68.499000
+postgres,All Columns,7,61.222000,68.554000
+postgres,All Columns,8,61.260000,68.558000
+postgres,All Columns,9,61.245000,68.575000
+postgres,All Columns,10,61.368000,68.635000
+postgres,All Columns,11,61.277000,68.770000

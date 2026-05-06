@@ -1,0 +1,6 @@
+<q>
+emp_sorted_hundreds1:`hundreds1 xasc employees;
+emp_sorted_hundreds1:update hundreds1:`s#hundreds1 from emp_sorted_hundreds1;
+</q>
+
+SELECT * FROM emp_sorted_hundreds1 WHERE hundreds1 = 150

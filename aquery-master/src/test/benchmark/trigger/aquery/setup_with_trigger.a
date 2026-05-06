@@ -1,0 +1,99 @@
+CREATE TABLE orders(
+  ordernum INT,
+  itemnum INT,
+  quantity INT,
+  price FLOAT,
+  storeid STRING,
+  vendorid STRING
+)
+
+CREATE TABLE store(
+  storeid STRING,
+  name STRING
+)
+
+CREATE TABLE item(
+  itemnum INT,
+  price FLOAT
+)
+
+CREATE TABLE vendorOutstanding(
+  vendorid STRING,
+  amount FLOAT
+)
+
+CREATE TABLE storeOutstanding(
+  storeid STRING,
+  amount FLOAT
+)
+
+<q>
+.bench.readLines:{[file] @[read0;`$file;{()}]};
+
+itemFile:"/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/item_fractal_10_7.csv";
+itemLines:.bench.readLines itemFile;
+if[0<count itemLines;
+  itemParsed:"," vs' 1_ itemLines;
+  item,:flip `itemnum`price!(
+    "J"$ first each itemParsed;
+    "F"$ itemParsed[;1]
+    )
+  ];
+
+storeFile:"/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/store_fractal_10_7.csv";
+storeLines:.bench.readLines storeFile;
+if[0<count storeLines;
+  storeParsed:"," vs' 1_ storeLines;
+  store,:flip `storeid`name!(
+    `$ first each storeParsed;
+    `$ storeParsed[;1]
+    )
+  ];
+
+vendorOutstandingFile:"/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/vendorOutstanding_fractal_10_7.csv";
+vendorOutstandingLines:.bench.readLines vendorOutstandingFile;
+if[0<count vendorOutstandingLines;
+  vendorOutstandingParsed:"," vs' 1_ vendorOutstandingLines;
+  vendorOutstanding,:flip `vendorid`amount!(
+    `$ first each vendorOutstandingParsed;
+    "F"$ vendorOutstandingParsed[;1]
+    )
+  ];
+storeOutstandingFile:"/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/storeOutstanding_fractal_10_7.csv";
+storeOutstandingLines:.bench.readLines storeOutstandingFile;
+if[0<count storeOutstandingLines;
+  storeOutstandingParsed:"," vs' 1_ storeOutstandingLines;
+  storeOutstanding,:flip `storeid`amount!(
+    `$ first each storeOutstandingParsed;
+    "F"$ storeOutstandingParsed[;1]
+    )
+  ];
+
+ordersFile:"/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/store/order_fractal_10_7.csv";
+ordersLines:.bench.readLines ordersFile;
+if[0<count ordersLines;
+  ordersParsed:"," vs' 1_ ordersLines;
+  orders,:flip `ordernum`itemnum`quantity`price`storeid`vendorid!(
+    "J"$ ordersParsed[;0];
+    "J"$ ordersParsed[;1];
+    "J"$ ordersParsed[;2];
+    "F"$ ordersParsed[;3];
+    `$ ordersParsed[;4];
+    `$ ordersParsed[;5]
+    )
+  ];
+</q>
+
+CREATE TRIGGER updateVendorOutstanding
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO UPDATE vendorOutstanding
+   SET amount = amount + inserted.quantity * inserted.price
+   WHERE vendorOutstanding.vendorid = inserted.vendorid
+
+CREATE TRIGGER updateStoreOutstanding
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS inserted
+DO UPDATE storeOutstanding
+   SET amount = amount + inserted.quantity * inserted.price
+   WHERE storeOutstanding.storeid = inserted.storeid

@@ -1,0 +1,3 @@
+SELECT SUM(quantity * price) AS amount
+FROM orders
+WHERE storeid = "10"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aquery-master/aquery.iml" filepath="$PROJECT_DIR$/.idea/modules/aquery-master/aquery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aquery-master/aquery.aquery-build.iml" filepath="$PROJECT_DIR$/.idea/modules/aquery-master/aquery.aquery-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aquery-master/aquery.main.iml" filepath="$PROJECT_DIR$/.idea/modules/aquery-master/aquery.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aquery-master/aquery.test.iml" filepath="$PROJECT_DIR$/.idea/modules/aquery-master/aquery.test.iml" />
+    </modules>
+  </component>
+</project>

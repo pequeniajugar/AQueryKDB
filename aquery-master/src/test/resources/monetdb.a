@@ -1,0 +1,24 @@
+<q>
+nums:([]val:(`int$1e6)?100.00);
+s_asc:asc;
+</q>
+
+
+FUNCTION naive_quantile(v, pct){
+  sorted_v := s_asc(v);
+  n := count(v);
+  ix := (pct * n / 100) - 0.5;
+  i := floor(ix);
+  q_v := sorted_v(i);
+  f := ix - i;
+  extra := CASE WHEN f != 0 THEN
+    f * sorted_v(i + 1) - f * sorted_v(i)
+    ELSE 0.0 END;
+    
+  list(extra + q_v)
+ }
+
+select naive_quantile(val, 95) as q95 from nums
+
+select naive_quantile(val, 5) as q5 from nums
+

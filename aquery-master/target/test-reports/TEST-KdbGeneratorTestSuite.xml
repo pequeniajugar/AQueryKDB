@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="tianxinwangdeMacBook-Pro.local" name="KdbGeneratorTestSuite" tests="21" errors="0" failures="1" skipped="0" time="11.2" timestamp="2026-04-01T07:32:26">
+          <properties>
+      <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/><property name="jline.terminal" value="none"/><property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@11/11.0.30/libexec/openjdk.jdk/Contents/Home/lib"/><property name="sun.java.command" value="/opt/homebrew/Cellar/sbt/1.12.6/libexec/bin/sbt-launch.jar testOnly ParserTestSuite KdbGeneratorTestSuite"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2026-01-20"/><property name="java.home" value="/opt/homebrew/Cellar/openjdk@11/11.0.30/libexec/openjdk.jdk/Contents/Home"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="Zero based"/><property name="line.separator" value="
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.30+0"/><property name="user.name" value="tianxin"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="java.vendor.version" value="Homebrew"/><property name="java.io.tmpdir" value="/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/"/><property name="java.version" value="11.0.30"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/Users/tianxin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.vendor" value="Homebrew"/><property name="java.specification.maintenance.version" value="3"/><property name="scala.ext.dirs" value="/Users/tianxin/.sbt/1.0/java9-rt-ext-homebrew_11_0_30"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="gopherProxySet" value="false"/><property name="java.class.path" value="/opt/homebrew/Cellar/sbt/1.12.6/libexec/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Homebrew"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="America/New_York"/><property name="os.name" value="Mac OS X"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/Users/tianxin"/><property name="user.language" value="en"/><property name="sbt.script" value="/opt/homebrew/Cellar/sbt/1.12.6/libexec/bin/sbt"/><property name="sbt.ipcsocket.tmpdir" value="/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/.sbt7dfd8305/ipcsocket"/><property name="swoval.tmpdir" value="/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/.sbt7dfd8305/swoval"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="15.3.1"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/><property name="user.dir" value="/Users/tianxin/projects/nyu/ms2/independent_study/github/AQuery/aquery-master"/><property name="os.arch" value="aarch64"/><property name="java.vm.info" value="mixed mode"/><property name="java.vm.version" value="11.0.30+0"/><property name="java.class.version" value="55.0"/>
+    </properties>
+          <testcase classname="KdbGeneratorTestSuite" name="simple expressions/UDF" time="0.545">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="create" time="0.276">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="insert" time="0.253">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="generate scalar subquery in trigger update" time="0.009">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="load/save" time="0.281">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="update/delete" time="0.331">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen" time="0.008">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen multi-key" time="0.002">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen expression mapping" time="0.002">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen mixed target and transition expression" time="0.002">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen complex delete where" time="0.004">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen old-table update mapping" time="0.002">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen after delete old-table mapping" time="0.001">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen delete-sync mapping" time="0.001">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="trigger registration codegen before delete old-table binding" time="0.001">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="drop trigger codegen" time="0.001">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="simple queries" time="0.259">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="simple.a" time="6.553">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="fintime.a" time="2.082">
+                      
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="monetdb.a" time="0.186">
+                      <failure message="passed0 was false basic: 
+Files: /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/translated_10179754817404255789.q, /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q
++(,`q95)!,,94.99247
++(,`q5)!,,4.997797
+&quot;assign&quot;
+Failed to load:/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q
+" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: passed0 was false basic: 
+Files: /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/translated_10179754817404255789.q, /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q
++(,`q95)!,,94.99247
++(,`q5)!,,4.997797
+&quot;assign&quot;
+Failed to load:/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q
+
+	at org.scalatest.Assertions$class.newAssertionFailedException(Assertions.scala:500)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1555)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:466)
+	at KdbGeneratorTestSuite$$anonfun$20.apply$mcV$sp(KdbGeneratorTestSuite.scala:486)
+	at KdbGeneratorTestSuite$$anonfun$20.apply(KdbGeneratorTestSuite.scala:480)
+	at KdbGeneratorTestSuite$$anonfun$20.apply(KdbGeneratorTestSuite.scala:480)
+	at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)
+	at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:166)
+	at org.scalatest.Suite$class.withFixture(Suite.scala:1122)
+	at org.scalatest.FunSuite.withFixture(FunSuite.scala:1555)
+	at org.scalatest.FunSuiteLike$class.invokeWithFixture$1(FunSuiteLike.scala:163)
+	at org.scalatest.FunSuiteLike$$anonfun$runTest$1.apply(FunSuiteLike.scala:175)
+	at org.scalatest.FunSuiteLike$$anonfun$runTest$1.apply(FunSuiteLike.scala:175)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.FunSuiteLike$class.runTest(FunSuiteLike.scala:175)
+	at org.scalatest.FunSuite.runTest(FunSuite.scala:1555)
+	at org.scalatest.FunSuiteLike$$anonfun$runTests$1.apply(FunSuiteLike.scala:208)
+	at org.scalatest.FunSuiteLike$$anonfun$runTests$1.apply(FunSuiteLike.scala:208)
+	at org.scalatest.SuperEngine$$anonfun$traverseSubNodes$1$1.apply(Engine.scala:413)
+	at org.scalatest.SuperEngine$$anonfun$traverseSubNodes$1$1.apply(Engine.scala:401)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.org$scalatest$SuperEngine$$runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:483)
+	at org.scalatest.FunSuiteLike$class.runTests(FunSuiteLike.scala:208)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1555)
+	at org.scalatest.Suite$class.run(Suite.scala:1424)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1555)
+	at org.scalatest.FunSuiteLike$$anonfun$run$1.apply(FunSuiteLike.scala:212)
+	at org.scalatest.FunSuiteLike$$anonfun$run$1.apply(FunSuiteLike.scala:212)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:545)
+	at org.scalatest.FunSuiteLike$class.run(FunSuiteLike.scala:212)
+	at org.scalatest.FunSuite.run(FunSuite.scala:1555)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:466)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:677)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.processRunnable$1(Tests.scala:475)
+	at sbt.Tests$.$anonfun$makeSerial$1(Tests.scala:481)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="KdbGeneratorTestSuite" name="pandas.a" time="0.401">
+                      
+                    </testcase>
+          <system-out><![CDATA[]]></system-out>
+          <system-err><![CDATA[]]></system-err>
+        </testsuite>

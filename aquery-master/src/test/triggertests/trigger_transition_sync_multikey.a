@@ -1,0 +1,26 @@
+CREATE TABLE table1(id INT, subid INT, qty INT, note STRING)
+CREATE TABLE table2(id INT, subid INT, qty INT, note STRING)
+
+INSERT INTO table1 VALUES(1, 10, 100, "src_a")
+INSERT INTO table1 VALUES(1, 20, 200, "src_b")
+INSERT INTO table1 VALUES(2, 10, 300, "src_c")
+
+INSERT INTO table2 VALUES(1, 10, 0, "dest_a")
+INSERT INTO table2 VALUES(1, 20, 0, "dest_b")
+INSERT INTO table2 VALUES(2, 10, 0, "dest_c")
+
+CREATE TRIGGER trg_sync_table2_multikey
+AFTER UPDATE ON table1
+REFERENCING NEW TABLE AS inserted
+DO UPDATE table2
+   SET qty = inserted.qty, note = inserted.note
+   WHERE table2.id = inserted.id AND table2.subid = inserted.subid
+
+UPDATE table1
+SET qty = 111, note = "src_a_updated"
+WHERE id = 1 AND subid = 10
+
+<q>
+show table1;
+show table2;
+</q>

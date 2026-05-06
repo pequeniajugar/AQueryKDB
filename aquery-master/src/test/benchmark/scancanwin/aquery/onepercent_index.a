@@ -1,0 +1,1 @@
+SELECT * FROM scanwin_idx_onepercent1 WHERE onepercent1 = 5

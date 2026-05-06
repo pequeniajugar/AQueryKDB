@@ -1,0 +1,5 @@
+<q>
+trade:([] sym:`AAPL`MSFT; qty:2 3i; price:10 20f);
+</q>
+
+update trade set qty = 5 where sym="AAPL"

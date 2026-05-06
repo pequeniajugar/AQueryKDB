@@ -1,0 +1,56 @@
+[debug] Running TaskDef(ParserTestSuite, org.scalatest.tools.Framework$$anon$1@2325eab8, false, [SuiteSelector])
+[info] ParserTestSuite:
+[info] - arithmetic
+[info] - case expressions
+[info] - scalar subquery expression
+[info] - create/insert
+[info] - trigger
+[info] - io
+[info] - update
+[info] - delete
+[info] - udf
+[info] - from-clause
+[info] - complete query
+[info] - simple program
+[info] - fintime benchmark
+[info] - monetbd benchmark
+[info] - pandas benchmark
+[debug] Running TaskDef(KdbGeneratorTestSuite, org.scalatest.tools.Framework$$anon$1@2325eab8, false, [SuiteSelector])
+[info] KdbGeneratorTestSuite:
+[info] - simple expressions/UDF
+[info] - create
+[info] - insert
+[info] - generate scalar subquery in trigger update
+[info] - load/save
+[info] - update/delete
+[info] - trigger registration codegen
+[info] - trigger registration codegen multi-key
+[info] - trigger registration codegen expression mapping
+[info] - trigger registration codegen mixed target and transition expression
+[info] - trigger registration codegen complex delete where
+[info] - trigger registration codegen old-table update mapping
+[info] - trigger registration codegen after delete old-table mapping
+[info] - trigger registration codegen delete-sync mapping
+[info] - trigger registration codegen before delete old-table binding
+[info] - drop trigger codegen
+[info] - simple queries
+[info] - simple.a
+[info] - fintime.a
+[info] - monetdb.a *** FAILED ***
+[info]   passed0 was false basic: 
+[info]   Files: /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/translated_10179754817404255789.q, /var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q
+[info]   +(,`q95)!,,94.99247
+[info]   +(,`q5)!,,4.997797
+[info]   "assign"
+[info]   Failed to load:/var/folders/v9/nz3tpj_95ss_l8tkj3qsjvfh0000gn/T/kdb_5658914831995026223.q (KdbGeneratorTestSuite.scala:486)
+[info] - pandas.a
+[info] Run completed in 11 seconds, 816 milliseconds.
+[info] Total number of tests run: 36
+[info] Suites: completed 2, aborted 0
+[info] Tests: succeeded 35, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[debug] Passed tests:
+[debug] 	ParserTestSuite
+[error] Failed tests:
+[error] 	KdbGeneratorTestSuite
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
