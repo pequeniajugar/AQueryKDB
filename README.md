@@ -108,27 +108,68 @@ Exit q:
 
 ---
 
-## Build aquery.jar
+## AQuery Query Syntax Overview
 
-This is only needed if you modified the Scala source code.
+AQuery source files under `aquery-master` usually use the `.a` suffix. The compiler translates them into `.q` files that can be executed by kdb+. The syntax is SQL-like, with additional support for kdb+/array-oriented operations, `ASSUMING` ordering hints, triggers, and embedded q code.
 
-From the repository root:
+A minimal query:
 
-```bash
-sbt assembly
+```sql
+SELECT l_orderkey, l_partkey, l_quantity
+FROM lineitem
+WHERE l_quantity > 10 AND l_shipdate < '01/01/1998'
 ```
 
-Expected output:
+A more complete query shape:
 
-```text
-target/scala-2.11/aquery.jar
+```sql
+WITH recent_orders AS (
+  SELECT ordernum, itemnum, quantity
+  FROM orders
+  WHERE quantity > 0
+)
+SELECT storeid, SUM(quantity) AS total_quantity
+FROM recent_orders
+ASSUMING ASC storeid
+WHERE storeid != "UNKNOWN"
+GROUP BY storeid
+HAVING SUM(quantity) > 100
 ```
 
-If you are already inside `target/scala-2.11`, the jar path is simply:
+Main syntax points:
 
-```text
-aquery.jar
+- `SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ...` is similar to SQL. Multiple `WHERE` or `HAVING` conditions are joined with `AND`.
+- `WITH name AS (SELECT ...)` defines a local query. You can also write `WITH name(col1, col2) AS (...)` to provide explicit output column names.
+- `FROM` supports plain tables, aliases, comma joins, `INNER JOIN ... USING (...)`, and `FULL OUTER JOIN ... USING (...)`. For a single join key, `USING key` can omit parentheses.
+- `ASSUMING ASC col` or `ASSUMING DESC col` declares that the input relation is already ordered by a column. The optimizer and code generator can use this information.
+- Expressions support `+ - * / ^`, comparison operators, boolean operators `&`/`|`/`!`, `CASE WHEN ... THEN ... ELSE ... END`, `table.column`, `ROWID`, and array indexes `[EVEN]`, `[ODD]`, `[EVERY n]`.
+- Common built-in functions include `SUM`, `AVG`, `COUNT`, `MIN`, `MAX`, `FIRST`, `LAST`, `DISTINCT`, `ABS`, `SQRT`, `PREV`, `NEXT`, `MOVING`, `FILL`, and `SHOW`.
+- Strings use double quotes, for example `"EUROPE"`. Dates and timestamps use single quotes, with formats `'MM/dd/yyyy'` and `'MM/dd/yyyyDHH:mm:ss'`. Timestamps may include a nanosecond suffix.
+- Type names must be uppercase: `INT`, `FLOAT`, `STRING`, `BOOLEAN`, `DATE`, `TIMESTAMP`.
+- Use `<q> ... </q>` to embed native q code directly inside a `.a` file.
+
+AQuery also supports DDL/DML and triggers:
+
+```sql
+CREATE TABLE orders (ordernum INT, itemnum INT, quantity INT, storeid STRING)
+
+INSERT INTO orders (ordernum, itemnum, quantity, storeid)
+VALUES (1, 10, 5, "s1")
+
+UPDATE orders SET quantity = quantity + 1 WHERE ordernum = 1
+
+DELETE FROM orders WHERE quantity <= 0
+
+CREATE TRIGGER update_totals
+AFTER INSERT ON orders
+REFERENCING NEW TABLE AS new_orders
+DO INSERT INTO totals
+SELECT storeid, SUM(quantity) AS total_quantity
+FROM new_orders
+GROUP BY storeid
 ```
+
+For more examples, see `aquery-master/src/test/benchmark/**/aquery/*.a`, `aquery-master/src/test/resources/*.a`, and `aquery-master/src/test/triggertests/*.a`.
 
 ## Translate `.a` files to `.q`
 
@@ -181,7 +222,70 @@ java -cp target/scala-2.11/aquery.jar edu.nyu.aquery.Aquery \
   src/test/benchmark/denormalization/aquery/with_denormalization.a
 ```
 
-### With Selected Optimizations
+## Run generated q
+
+After translation, load the generated `.q` file in kdb+:
+
+```bash
+q src/test/benchmark/denormalization/aquery/with_denormalization.q
+```
+
+Or inside a q session:
+
+```q
+\l src/test/benchmark/denormalization/aquery/with_denormalization.q
+```
+
+## Run Benchmark Experiments
+
+The scripts under `aquery-master/src/test/benchmark` are organized by experiment and DBMS. AQuery entrypoint scripts are usually named `run_aquery.sh`. Run them from `aquery-master` so result CSV files are written to `aquery-master/results`:
+
+```bash
+cd aquery-master
+bash src/test/benchmark/select_all/run_aquery.sh
+```
+
+The shared AQuery benchmark runner is `src/test/benchmark/base_aquery.sh`. It loads one setup `.q` file, then loads one or more query `.q` files. Each query runs 11 times by default, and results are appended to `./results/<output>.csv`:
+
+```bash
+bash src/test/benchmark/base_aquery.sh \
+  src/test/benchmark/select_all/load_tpch_small.q \
+  aquery_small_select_all.csv \
+  src/test/function_support/retrieve_need_col/retrieve_a.q:"All Columns"
+```
+
+Common experiment entrypoints:
+
+```bash
+cd aquery-master
+
+# select all / retrieve-needed-columns
+bash src/test/benchmark/select_all/run_aquery.sh
+
+# range query without index
+bash src/test/benchmark/range_noindex/run_aquery.sh
+
+# indexed columns vs scan columns
+bash src/test/benchmark/scancanwin/run_aquery.sh
+
+# denormalization experiment
+bash src/test/benchmark/denormalization/run_aquery.sh
+
+# aggregate trigger experiment
+bash src/test/benchmark/trigger/aquery/run_aquery.sh
+```
+
+Before running:
+
+- kdb+ `q` must be executable. If `q` is not in `PATH`, set `Q_BIN`, for example `Q_BIN=/Users/tianxin/q/m64/q bash src/test/benchmark/range_noindex/run_aquery.sh`.
+- `base_aquery.sh` depends on `bash`, `script`, `bc`, and kdb+. The trigger experiment also uses `python` and `sbt` to compile `.a` files.
+- Most AQuery benchmarks already include pre-generated `.q` query files. If you edit the corresponding `.a` files, translate them again before running the benchmark.
+- The `denormalization` and `trigger` experiments default to local absolute data paths. Use `DENORM_TBL=...` to point to the denormalized TPCH file, and `TRIGGER_INPUT_CSV=...` to point to the trigger input CSV.
+- The same benchmark directories also include scripts such as `run_duckdb.sh` and `run_postgres.sh` for DuckDB/PostgreSQL comparison runs. PostgreSQL scripts usually require database connection setup and data loading first.
+
+## YOU SHOULD BE ALL SET NOW, WHAT FOLLOWS HERE IS OPTIONAL
+
+## Translate `.a` files to `.q` With Selected Optimizations
 
 `-a 1` applies all available optimizations by default. To apply selected optimizations only, pass `-opts` with a comma-separated list:
 
@@ -230,16 +334,24 @@ If the jar has a main-class manifest, this shorter form may also work:
 java -jar target/scala-2.11/aquery.jar -c -o output.q input.a
 ```
 
-## Run generated q
+## Advanced option: Build aquery.jar
 
-After translation, load the generated `.q` file in kdb+:
+This is only needed if you modified the Scala source code.
+
+From the repository root:
 
 ```bash
-q src/test/benchmark/denormalization/aquery/with_denormalization.q
+sbt assembly
 ```
 
-Or inside a q session:
+Expected output:
 
-```q
-\l src/test/benchmark/denormalization/aquery/with_denormalization.q
+```text
+target/scala-2.11/aquery.jar
+```
+
+If you are already inside `target/scala-2.11`, the jar path is simply:
+
+```text
+aquery.jar
 ```

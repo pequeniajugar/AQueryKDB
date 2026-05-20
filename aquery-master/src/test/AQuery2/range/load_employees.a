@@ -1,0 +1,5 @@
+CREATE TABLE employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT)
+exec
+
+LOAD DATA INFILE "/Users/tianxin/projects/nyu/ms2/independent_study/data/employees/employeesindex_10_5.csv" INTO TABLE employees FIELDS TERMINATED BY ","
+exec

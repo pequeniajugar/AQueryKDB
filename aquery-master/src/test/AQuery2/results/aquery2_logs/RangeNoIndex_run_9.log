@@ -1,0 +1,17 @@
+Thread pool started with 14 threads;
+> > QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+> > > QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+> > > stdin inreadable, Exiting...
+
+Bye.
+Dbg: Getting col %2, type: monetdbe_str
+**** WELCOME TO AQUERY++! ****
+QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+ , 1
+Exec Q0: QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+ 132666, 0QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+ , 1
+Exec Q0: QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+ 1042895167, 0Oÿÿÿÿ 
+, 0
+0, 39833AQUERY2_TIME|2.148304

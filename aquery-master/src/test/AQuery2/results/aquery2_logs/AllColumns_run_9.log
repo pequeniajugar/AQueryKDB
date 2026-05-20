@@ -1,0 +1,17 @@
+Thread pool started with 14 threads;
+> > QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+> > > QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+> > > stdin inreadable, Exiting...
+
+Bye.
+Dbg: Getting col %2, type: monetdbe_str
+**** WELCOME TO AQUERY++! ****
+QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+ , 1
+Exec Q0: QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+ 153083, 0QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+ , 1
+Exec Q0: QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+ 49277042, 0Oÿÿÿÿ 
+, 0
+0, 50625AQUERY2_TIME|1.195522

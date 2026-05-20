@@ -1,0 +1,25 @@
+Thread pool started with 14 threads;
+> > QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+> > > QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+> > > QCREATE TABLE IF NOT EXISTS orders(o_orderkey INT, o_custkey INT, o_orderstatus TEXT, o_totalprice REAL, o_orderdate TEXT, o_orderpriority TEXT, o_clerk TEXT, o_shippriority INT, o_comment TEXT);
+> > > QCOPY OFFSET 2 INTO orders FROM  '/tmp/orders.tbl'  ON SERVER    USING DELIMITERS  '|';
+> > > stdin inreadable, Exiting...
+
+Bye.
+Dbg: Getting col %2, type: monetdbe_str
+**** WELCOME TO AQUERY++! ****
+QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+ , 1
+Exec Q0: QCREATE TABLE IF NOT EXISTS lineitem(l_orderkey INT, l_partkey INT, l_suppkey INT, l_linenumber INT, l_quantity REAL, l_extendedprice REAL, l_discount REAL, l_tax REAL, l_returnflag TEXT, l_linestatus TEXT, l_shipdate TEXT, l_commitdate TEXT, l_receiptdate TEXT, l_shipinstruct TEXT, l_shipmode TEXT, l_comment TEXT);
+ 177584, 0QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+ , 1
+Exec Q0: QCOPY OFFSET 2 INTO lineitem FROM  '/tmp/lineitem.tbl'  ON SERVER    USING DELIMITERS  '|';
+ 3316785987, 0QCREATE TABLE IF NOT EXISTS orders(o_orderkey INT, o_custkey INT, o_orderstatus TEXT, o_totalprice REAL, o_orderdate TEXT, o_orderpriority TEXT, o_clerk TEXT, o_shippriority INT, o_comment TEXT);
+ , 1
+Exec Q0: QCREATE TABLE IF NOT EXISTS orders(o_orderkey INT, o_custkey INT, o_orderstatus TEXT, o_totalprice REAL, o_orderdate TEXT, o_orderpriority TEXT, o_clerk TEXT, o_shippriority INT, o_comment TEXT);
+ 296792, 0QCOPY OFFSET 2 INTO orders FROM  '/tmp/orders.tbl'  ON SERVER    USING DELIMITERS  '|';
+ , 1
+Exec Q0: QCOPY OFFSET 2 INTO orders FROM  '/tmp/orders.tbl'  ON SERVER    USING DELIMITERS  '|';
+ 855233417, 0Oÿÿÿÿ 
+, 0
+0, 64958AQUERY2_TIME|5.336870

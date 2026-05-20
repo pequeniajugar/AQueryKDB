@@ -1,0 +1,30 @@
+Thread pool started with 14 threads;
+> > QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+> > > QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+> > Dbg: Getting col %2, type: monetdbe_str
+**** WELCOME TO AQUERY++! ****
+QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+ , 1
+Exec Q0: QCREATE TABLE IF NOT EXISTS employees(ssnum INT, name TEXT, lat INT, longitude INT, hundreds1 INT, hundreds2 INT);
+ 127500, 0QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+ , 1
+Exec Q0: QCOPY OFFSET 2 INTO employees FROM  '/tmp/employeesindex_10_7.csv'  ON SERVER    USING DELIMITERS  ',';
+ 1048547459, 0Traceback (most recent call last):
+  File "/AQuery2/prompt.py", line 786, in <module>
+    prompt(state=state)
+  File "/AQuery2/prompt.py", line 487, in prompt
+    state.cxt = cxt = xengine.exec(state.stmts, cxt, keep, parser.parse)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/AQuery2/engine/__init__.py", line 31, in exec
+    generate(stmts_stmts, cxt)
+  File "/AQuery2/engine/__init__.py", line 19, in generate
+    ast_node.types[k](None, ast, cxt)
+  File "/AQuery2/engine/ast.py", line 83, in __init__
+    super().__init__(parent, node, context)
+  File "/AQuery2/engine/ast.py", line 29, in __init__
+    self.consume(node)
+  File "/AQuery2/engine/ast.py", line 365, in consume
+    f'{self.input_table_name}->get_col<{self.datasource.parse_col_names(v).id}>();')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+AQUERY2_TIME|2.155400

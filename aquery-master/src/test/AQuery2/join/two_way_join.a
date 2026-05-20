@@ -1,0 +1,2 @@
+SELECT l_orderkey, l_partkey, o_orderdate, o_orderstatus FROM lineitem, orders WHERE l_orderkey = o_orderkey
+exec

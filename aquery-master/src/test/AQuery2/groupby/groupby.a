@@ -1,0 +1,2 @@
+SELECT hundreds1, COUNT(*) FROM employees GROUP BY hundreds1
+exec

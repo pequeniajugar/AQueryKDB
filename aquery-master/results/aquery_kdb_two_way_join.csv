@@ -1,0 +1,12 @@
+dbms,label,iteration,execution_time,response_time
+aquery,two_way_join,1,0.024000,0.361000
+aquery,two_way_join,2,0.019000,0.208000
+aquery,two_way_join,3,0.019000,0.128000
+aquery,two_way_join,4,0.017000,0.121000
+aquery,two_way_join,5,0.019000,0.138000
+aquery,two_way_join,6,0.019000,0.129000
+aquery,two_way_join,7,0.019000,0.129000
+aquery,two_way_join,8,0.019000,0.129000
+aquery,two_way_join,9,0.017000,0.124000
+aquery,two_way_join,10,0.019000,0.132000
+aquery,two_way_join,11,0.018000,0.122000

@@ -1,0 +1,2 @@
+SELECT * FROM employees WHERE lat >= 150 AND lat <= 1150
+exec

@@ -1,0 +1,23 @@
+dbms,label,iteration,execution_time,response_time
+aquery,All Columns,1,0.022000,0.231000
+aquery,All Columns,2,0.018000,0.120000
+aquery,All Columns,3,0.021000,0.275000
+aquery,All Columns,4,0.019000,0.125000
+aquery,All Columns,5,0.018000,0.122000
+aquery,All Columns,6,0.019000,0.131000
+aquery,All Columns,7,0.019000,0.123000
+aquery,All Columns,8,0.021000,0.201000
+aquery,All Columns,9,0.019000,0.129000
+aquery,All Columns,10,0.019000,0.122000
+aquery,All Columns,11,0.017000,0.120000
+aquery,All Columns,1,0.023000,0.355000
+aquery,All Columns,2,0.021000,0.232000
+aquery,All Columns,3,0.018000,0.122000
+aquery,All Columns,4,0.019000,0.129000
+aquery,All Columns,5,0.019000,0.136000
+aquery,All Columns,6,0.019000,0.224000
+aquery,All Columns,7,0.019000,0.126000
+aquery,All Columns,8,0.018000,0.128000
+aquery,All Columns,9,0.019000,0.131000
+aquery,All Columns,10,0.017000,0.119000
+aquery,All Columns,11,0.018000,0.128000

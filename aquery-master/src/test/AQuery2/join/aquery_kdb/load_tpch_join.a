@@ -1,0 +1,34 @@
+CREATE TABLE lineitem(
+  l_orderkey INT,
+  l_partkey INT,
+  l_suppkey INT,
+  l_linenumber INT,
+  l_quantity FLOAT,
+  l_extendedprice FLOAT,
+  l_discount FLOAT,
+  l_tax FLOAT,
+  l_returnflag STRING,
+  l_linestatus STRING,
+  l_shipdate STRING,
+  l_commitdate STRING,
+  l_receiptdate STRING,
+  l_shipinstruct STRING,
+  l_shipmode STRING,
+  l_comment STRING
+)
+
+LOAD DATA INFILE "/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/tpch/data_sf2/lineitem.tbl" INTO TABLE lineitem FIELDS TERMINATED BY "|"
+
+CREATE TABLE orders(
+  o_orderkey INT,
+  o_custkey INT,
+  o_orderstatus STRING,
+  o_totalprice FLOAT,
+  o_orderdate STRING,
+  o_orderpriority STRING,
+  o_clerk STRING,
+  o_shippriority INT,
+  o_comment STRING
+)
+
+LOAD DATA INFILE "/Users/tianxin/projects/nyu/ms1/research/dbtunning_experiements/data_generation/tpch/data_sf2/orders.tbl" INTO TABLE orders FIELDS TERMINATED BY "|"
