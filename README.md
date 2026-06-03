@@ -148,6 +148,81 @@ Main syntax points:
 - Type names must be uppercase: `INT`, `FLOAT`, `STRING`, `BOOLEAN`, `DATE`, `TIMESTAMP`.
 - Use `<q> ... </q>` to embed native q code directly inside a `.a` file.
 
+Basic `.a` query examples adapted from `aquery-master/src/test/benchmark`:
+
+Full table scan:
+
+```sql
+SELECT * FROM lineitem
+```
+
+Range predicate:
+
+```sql
+SELECT *
+FROM employees
+WHERE lat BETWEEN 150 AND 1150
+```
+
+Point lookup on an indexed or pre-sorted table prepared with embedded q:
+
+```sql
+<q>
+emp_sorted_ssnum:`ssnum xasc employees;
+emp_sorted_ssnum:update ssnum:`s#ssnum from emp_sorted_ssnum;
+</q>
+
+SELECT *
+FROM emp_sorted_ssnum
+WHERE ssnum = 150
+```
+
+Multi-table join with aliases and filters:
+
+```sql
+SELECT
+  L.l_orderkey,
+  L.l_partkey,
+  L.l_quantity,
+  R.r_name
+FROM lineitem AS L, supplier AS S, nation AS N, region AS R
+WHERE L.l_suppkey = S.s_suppkey
+  AND S.s_nationkey = N.n_nationkey
+  AND N.n_regionkey = R.r_regionkey
+  AND R.r_name = "EUROPE"
+```
+
+Create a denormalized table from a query:
+
+```sql
+CREATE TABLE lineitemdenormalized
+SELECT
+  L.l_orderkey,
+  L.l_partkey,
+  L.l_quantity,
+  R.r_name AS r_region
+FROM lineitem AS L, supplier AS S, nation AS N, region AS R
+WHERE L.l_suppkey = S.s_suppkey
+  AND S.s_nationkey = N.n_nationkey
+  AND N.n_regionkey = R.r_regionkey
+```
+
+Query the denormalized table:
+
+```sql
+SELECT l_orderkey, l_partkey, l_quantity, r_region
+FROM lineitemdenormalized
+WHERE r_region = "EUROPE"
+```
+
+Read a value maintained by triggers:
+
+```sql
+SELECT amount
+FROM storeOutstanding
+WHERE storeid = "10"
+```
+
 AQuery also supports DDL/DML and triggers:
 
 ```sql
