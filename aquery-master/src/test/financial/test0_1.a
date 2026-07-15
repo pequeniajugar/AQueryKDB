@@ -1,0 +1,12 @@
+WITH
+  Target(Id, TradeDate, ClosePrice) AS (
+    SELECT Id, TradeDate, ClosePrice
+    FROM price
+    WHERE Id IN stock10
+      AND TradeDate >= startYear10
+      AND TradeDate <= startYear10 + 365 * 10
+  )
+
+SELECT Id, TradeDate, ClosePrice
+FROM Target
+ASSUMING ASC Id, ASC TradeDate

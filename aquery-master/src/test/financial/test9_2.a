@@ -1,0 +1,14 @@
+<q>
+q9StartYear:{getYear maxTradeDateMinus3Years};
+</q>
+
+WITH
+  splitdata(Dummy, Id) AS (
+    SELECT 1, distinct(Id)
+    FROM split
+    WHERE Id IN Russell2000
+      AND getYear(SplitDate) >= q9StartYear()
+  )
+
+SELECT Dummy, Id
+FROM splitdata

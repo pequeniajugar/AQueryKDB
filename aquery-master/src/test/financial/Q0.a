@@ -1,0 +1,42 @@
+<q>
+constWeekly:{(count x)#`weekly};
+constMonthly:{(count x)#`monthly};
+constYearly:{(count x)#`yearly};
+</q>
+
+
+WITH
+ // our main source of information, localized, avoiding rerunning for each aggregation
+ Target(Id, TradeDate, ClosePrice)  AS (select
+ Id, TradeDate,ClosePrice
+ FROM price
+ where Id in stock10 and TradeDate >= startYear10 and TradeDate <= startYear10 + 365 * 10)
+
+  weekly(Id, bucket, name, low, high, mean) AS (select
+    Id,
+    timeBucket,
+    constWeekly(Id),
+    min(ClosePrice),
+	  max(ClosePrice), avg(ClosePrice)
+  	from Target group by Id, getWeek(TradeDate) as timeBucket)
+
+  monthly(Id, bucket, name, low, high, mean) AS (select
+    Id,
+    timeBucket,
+    constMonthly(Id),
+     min(ClosePrice),
+	   max(ClosePrice),
+     avg(ClosePrice)
+  	 from Target group by Id, getMonth(TradeDate) as timeBucket)
+
+  yearly(Id, bucket, name, low, high, mean) AS (select
+    Id,
+    timeBucket,
+    constYearly(Id),
+     min(ClosePrice),
+	   max(ClosePrice),
+     avg(ClosePrice)
+  	 from Target group by Id, getYear(TradeDate) as timeBucket)
+
+select Id, bucket, name, low, high, mean from CONCATENATE(weekly, monthly, yearly)
+    assuming asc Id, asc name, asc bucket

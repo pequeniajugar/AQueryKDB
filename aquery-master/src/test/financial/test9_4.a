@@ -1,0 +1,18 @@
+<q>
+q9StartYear:{getYear maxTradeDateMinus3Years};
+q9SplitIds:{exec distinct Id from split where Id in Russell2000, getYear[SplitDate] >= getYear maxTradeDateMinus3Years};
+</q>
+
+WITH
+  divdata(Id, year, total_divs) AS (
+    SELECT Id, getYear(AnnounceDate), sum(DivAmt)
+    FROM dividend
+    WHERE Id IN Russell2000
+      AND getYear(AnnounceDate) >= q9StartYear()
+      AND Id NOT IN q9SplitIds()
+    GROUP BY Id, getYear(AnnounceDate)
+  )
+
+SELECT Id, year, total_divs
+FROM divdata
+ASSUMING ASC Id, ASC year

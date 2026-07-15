@@ -1,0 +1,4 @@
+SELECT avg(ClosePrice) AS avg_close_price
+FROM price
+WHERE Id IN SP500
+  AND TradeDate = startPeriod

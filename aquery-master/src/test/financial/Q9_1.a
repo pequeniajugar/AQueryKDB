@@ -1,0 +1,29 @@
+WITH
+    // store start date
+    DateInfo(startYear, startDate) AS (
+      select getYear(max(TradeDate) - 365 * 3), max(TradeDate) - 365 * 3 from price
+    )
+
+    // we introduce a dummy column to avoid having q
+    // group on distinct
+    splitdata(Dummy, Id) AS (
+    select 1, distinct(Id) from split where Id in Russell2000 and
+    getYear(SplitDate) >= first(DateInfo("startYear"))
+    )
+
+    nosplit_avgpx AS (
+    select Id, year, avg(ClosePrice) as avg_px from price where Id in Russell2000 and
+    TradeDate >= first(DateInfo("startDate")) and Id not in splitdata("Id")
+    group by Id, getYear(TradeDate) as year
+    )
+
+    divdata AS (
+      select Id, year, sum(DivAmt) as total_divs from dividend where Id in Russell2000 and
+      getYear(AnnounceDate) >= first(DateInfo("startYear")) and Id not in splitdata("Id")
+      group by Id, getYear(AnnounceDate) as year
+    )
+
+    select Id, year,
+    float(avg_px) as avg_px, float(total_divs) as total_divs,
+    float(total_divs / avg_px) as yield
+    FROM nosplit_avgpx INNER JOIN divdata USING (Id, year)

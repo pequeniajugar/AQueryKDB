@@ -1,0 +1,33 @@
+<q>
+q9StartDate:{maxTradeDateMinus3Years};
+q9StartYear:{getYear maxTradeDateMinus3Years};
+q9SplitIds:{exec distinct Id from split where Id in Russell2000, getYear[SplitDate] >= getYear maxTradeDateMinus3Years};
+</q>
+
+WITH
+  nosplit_avgpx(Id, year, avg_px) AS (
+    SELECT Id, getYear(TradeDate), avg(ClosePrice)
+    FROM price
+    WHERE Id IN Russell2000
+      AND TradeDate >= q9StartDate()
+      AND Id NOT IN q9SplitIds()
+    GROUP BY Id, getYear(TradeDate)
+  )
+
+  divdata(Id, year, total_divs) AS (
+    SELECT Id, getYear(AnnounceDate), sum(DivAmt)
+    FROM dividend
+    WHERE Id IN Russell2000
+      AND getYear(AnnounceDate) >= q9StartYear()
+      AND Id NOT IN q9SplitIds()
+    GROUP BY Id, getYear(AnnounceDate)
+  )
+
+SELECT
+  Id,
+  year,
+  float(avg_px) AS avg_px,
+  float(total_divs) AS total_divs,
+  float(total_divs / avg_px) AS yield
+FROM nosplit_avgpx INNER JOIN divdata USING (Id, year)
+ASSUMING ASC Id, ASC year

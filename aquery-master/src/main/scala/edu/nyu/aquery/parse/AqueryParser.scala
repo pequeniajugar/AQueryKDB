@@ -191,7 +191,57 @@ object AqueryParser extends StandardTokenParsers with PackratParsers {
         | trigger
         | create
         | insert
-    )
+    ) ^^ { rewriteLocalStringConstants }
+
+  private def rewriteLocalStringConstants(prog: List[TopLevel]): List[TopLevel] = {
+    val helpers = scala.collection.mutable.LinkedHashSet.empty[String]
+
+    def helperName(s: String): String = {
+      val parts = s.split("[^A-Za-z0-9]+").toList.filter(_.nonEmpty)
+      val camel = parts match {
+        case Nil => "Symbol"
+        case h :: t => h.toLowerCase.capitalize + t.map(_.toLowerCase.capitalize).mkString("")
+      }
+      "aqConst" + camel
+    }
+
+    def helperDef(s: String): String =
+      s"""${helperName(s)}:{(count x)#`${s.replace("`", "")}};"""
+
+    def rewriteProject(p: Project): Project = {
+      val countExpr = p.ps.collectFirst { case (e, _) if !e.isInstanceOf[StringLit] => e }
+      countExpr match {
+        case Some(arg) =>
+          val newPs = p.ps.map {
+            case (StringLit(s), alias) =>
+              helpers += s
+              (FunCall(helperName(s), List(arg)), alias)
+            case other => other
+          }
+          p.copy(ps = newPs)
+        case None => p
+      }
+    }
+
+    def rewriteRelAlg(r: RelAlg): RelAlg = r match {
+      case Project(t, ps, attr) => rewriteProject(Project(rewriteRelAlg(t), ps, attr))
+      case Filter(t, fs, attr) => Filter(rewriteRelAlg(t), fs, attr)
+      case GroupBy(t, gs, having, attr) => GroupBy(rewriteRelAlg(t), gs, having, attr)
+      case SortBy(t, os, attr) => SortBy(rewriteRelAlg(t), os, attr)
+      case TopApply(fun, t, attr) => TopApply(fun, rewriteRelAlg(t), attr)
+      case Join(jt, l, r, cond, attr) => Join(jt, rewriteRelAlg(l), rewriteRelAlg(r), cond, attr)
+      case other => other
+    }
+
+    val rewritten = prog.map {
+      case Query(local, main, attr) if local.nonEmpty =>
+        Query(local.map { case (n, cs, q) => (n, cs, rewriteRelAlg(q)) }, main, attr)
+      case other => other
+    }
+
+    if (helpers.isEmpty) rewritten
+    else VerbatimCode(helpers.toList.map(helperDef).mkString("\n")) :: rewritten
+  }
 
   /*
     Queries: consist of an optional list of local queries followed by a main query

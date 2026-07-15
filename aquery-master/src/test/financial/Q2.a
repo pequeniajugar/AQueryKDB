@@ -1,0 +1,18 @@
+WITH
+  pxdata(Id, TradeDate, HighPrice, LowPrice) AS (
+    SELECT Id, TradeDate, HighPrice, LowPrice
+    FROM price
+    WHERE Id IN stock1000
+      AND TradeDate BETWEEN startPeriod AND endPeriod
+  )
+
+  splitdata(Id, TradeDate, SplitFactor) AS (
+    SELECT Id, SplitDate, SplitFactor
+    FROM split
+    WHERE Id IN stock1000
+      AND SplitDate BETWEEN startPeriod AND endPeriod
+  )
+
+SELECT Id, TradeDate, HighPrice - LowPrice AS MaxDiff
+FROM pxdata INNER JOIN splitdata USING (Id, TradeDate)
+ASSUMING ASC Id, ASC TradeDate

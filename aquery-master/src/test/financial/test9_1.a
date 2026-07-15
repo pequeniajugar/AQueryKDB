@@ -1,0 +1,8 @@
+WITH
+  DateInfo(startYear, startDate) AS (
+    SELECT getYear(max(TradeDate) - 365 * 3), max(TradeDate) - 365 * 3
+    FROM price
+  )
+
+SELECT startYear, startDate
+FROM DateInfo
